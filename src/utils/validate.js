@@ -1,0 +1,15 @@
+export const checkValidation = (email, password, name) => {
+
+    const IsEmailValid = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email);
+    const IsPasswordValid = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(password);
+    // const IsNameValid = /\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+/.test(name);
+
+    // if (!IsNameValid) return " Name is not valid";
+    if (!IsEmailValid) return " Email is not valid";
+    if (!IsPasswordValid) return " Password is not valid";
+
+
+    // if both valid 
+    return null;
+
+}
