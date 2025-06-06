@@ -8,6 +8,9 @@
 - Sign Up Form
 - Form Validation
 - useRef Hook
+- Firebase Setup
+- Deploying our app to production
+- Create SignUp
 
 # Feature
 - Login/SignUp
@@ -24,3 +27,10 @@
 - NetflixGPT 
     - Search Bar
     - Movie Suggestions
+
+
+- Firebase Deployment Steps
+    - Install Firebase CLI = 'npm install -g firebase-tools'
+    - Firebase Login - 'firebase login'
+    - Initialize Firebase - 'firebase int', then select hosting
+    - Deploy Command
