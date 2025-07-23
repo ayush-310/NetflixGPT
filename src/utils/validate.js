@@ -1,15 +1,13 @@
-export const checkValidation = (email, password, name) => {
+export const checkValidation = (email, password, name = "") => {
+    const isEmailValid = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email);
+    const isPasswordValid = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(password);
 
-    const IsEmailValid = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email);
-    const IsPasswordValid = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(password);
-    // const IsNameValid = /\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+/.test(name);
+    // Optional: Validate name only if provided
+    if (name && name.trim().length < 2) return "Name must be at least 2 characters long";
 
-    // if (!IsNameValid) return " Name is not valid";
-    if (!IsEmailValid) return " Email is not valid";
-    if (!IsPasswordValid) return " Password is not valid";
+    if (!isEmailValid) return "Email is not valid";
+    if (!isPasswordValid)
+        return "Password must be at least 8 characters long and include uppercase, lowercase, and a number";
 
-
-    // if both valid 
-    return null;
-
-}
+    return null; // Valid
+};

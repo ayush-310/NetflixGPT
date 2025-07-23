@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "etflixgpt-c433e"
-  }
+    "default": "netflixgpt-defec",
+    "Netflix": "netflixgpt-defec"
+  },
+  "targets": {},
+  "etags": {}
 }
