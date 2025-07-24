@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+// import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
@@ -18,9 +18,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 // Only enable analytics if running in a browser (optional safeguard)
-let analytics;
+// let analytics;
 if (typeof window !== 'undefined') {
-  analytics = getAnalytics(app);
+  // analytics = getAnalytics(app);
 }
 
 export const auth = getAuth(app);
