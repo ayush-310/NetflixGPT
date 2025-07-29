@@ -7,6 +7,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useDispatch } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
 import { USER_AVATAR, NETFLIX_LOGO } from '../utils/constants';
+import { toggleGPTSearchView } from '../utils/gptSlice';
 
 const Header = () => {
     const dispatch = useDispatch();
@@ -45,6 +46,12 @@ const Header = () => {
         // Unsubscribe on component unmounts
         return () => unsubscribe();
     }, []);
+
+
+    const handleGPTSearch = () => {
+        // Toggle GPT Search Button
+        dispatch(toggleGPTSearchView());
+    }
     return (
         <>
             <div className="absolute w-full  px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between">                <img
@@ -53,6 +60,11 @@ const Header = () => {
                 alt="logo" />
 
                 {user && <div className='flex p-2'>
+                    <button
+                        className='bg-red-600 text-white px-4 py-2 rounded-md  mr-4'
+                        onClick={handleGPTSearch}>
+                        GPT Search
+                    </button>
                     <img
                         className='w-12 h-12'
                         alt='user avatar'
