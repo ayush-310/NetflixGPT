@@ -1,17 +1,16 @@
-
-const lang = () => ({
+const lang = {
     eng: {
         search: "Search",
         gptSearchPlaceholder: "What would you like to watch today?",
     },
     hindi: {
-        search: "खोजें",
-        gptSearchPlaceholder: "आप आज क्या देखना चाहेंगे?",
+        search: "खोज",
+        gptSearchPlaceholder: "आज आप क्या देखना चाहेंगे?",
     },
     spanish: {
-        search: "Buscar",
+        search: "buscar",
         gptSearchPlaceholder: "¿Qué te gustaría ver hoy?",
-    }
-});
+    },
+};
 
 export default lang;

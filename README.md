@@ -37,6 +37,9 @@
 - Made the Browse Page Amazing with Tailwind CSS
 - usePopularMovies CustomHook
 - GPT Search Feature
+- GPT Search Bar
+- Multi-language Feature in our App
+- Integrate GPT API's
 
 
 # Feature
