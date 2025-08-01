@@ -40,6 +40,14 @@
 - GPT Search Bar
 - Multi-language Feature in our App
 - Integrate GPT API's
+- GPT Search API Call
+- fetched GPT movie Suggestions
+- created gptSlice added data
+- Resused Movie List component to make movie suggestion container
+- Memoization
+- Added .env file
+- Adding .env file to gitignore
+- Made our Site Responsive
 
 
 # Feature
