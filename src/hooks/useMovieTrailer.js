@@ -4,7 +4,9 @@ import { useEffect } from "react";
 import { addTrailerVideo } from "../utils/moviesSlice";
 import { API_OPTIONS } from "../utils/constants";
 
-const useMovieTrailer = ({movieId}) => {
+const useMovieTrailer = ({ movieId }) => {
+
+    // Fetch Data from TMDB API and update Redux store
     const trailerVideo = useSelector(store => store.movies?.trailerVideo);
     const dispatch = useDispatch();
 
@@ -20,7 +22,8 @@ const useMovieTrailer = ({movieId}) => {
     }
 
     useEffect(() => {
-        getMovieVideos();
+        // Memoization to avoid unnecessary API calls
+        !trailerVideo && getMovieVideos();
 
     }, []);
 }

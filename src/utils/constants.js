@@ -18,17 +18,4 @@ export const SUPPORTED_LANGUAGES = [
     { identifier: "spanish", name: "Español" },
 ]
 
-// NetFlix GPT API Key (ayuofficial11310@gmail)
-// export const OpenAI_API_KEY = "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";
-
-// Netflix2 (ayuofficial11310@gmail)
-// export const OpenAI_API_KEY = "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";
-
-// NetFlix GPT API Key (arthurr9654@gmail.com)
-// export const OpenAI_API_KEY = "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"
-
-// NetFlix GPT API Key (gamehck1@gmail.com)
-export const OpenAI_API_KEY = "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"
-
-
 export const GEMINI_API_KEY = process.env.REACT_APP_GEMINI_API_KEY;
