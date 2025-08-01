@@ -6,7 +6,7 @@ export const API_OPTIONS = {
     method: 'GET',
     headers: {
         accept: 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0MTI2NGM2OGE4MDg0NDdkMGQ3M2Y0MjM3YWI1MmI3YiIsIm5iZiI6MTc0ODMyMDg3MS44LCJzdWIiOiI2ODM1NDI2NzQ5OGYyNDk3YTg3MzBlMTUiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.s0Py8lDibodSIaXVrKFzW5TA6TcZAaTPHo6mo7BudQs'
+        Authorization: 'Bearer ' + process.env.REACT_APP_TMDB_API_KEY
     }
 };
 
@@ -31,4 +31,4 @@ export const SUPPORTED_LANGUAGES = [
 export const OpenAI_API_KEY = "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"
 
 
-export const GEMINI_API_KEY = "AIzaSyBVnT5VnwknuHU5AyK2JK8t-gIqtAo0CsQ"
+export const GEMINI_API_KEY = process.env.REACT_APP_GEMINI_API_KEY;
